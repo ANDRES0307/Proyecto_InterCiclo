@@ -9,12 +9,22 @@ package modelo;
  * @author Gus-Gus
  */
 public class Banco {
+    private long id;
     private String nombre;
     private String direccion;
 
-    public Banco(String nombre, String direccion) {
+    public Banco(long id, String nombre, String direccion) {
+        this.id = id;
         this.nombre = nombre;
         this.direccion = direccion;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -35,7 +45,6 @@ public class Banco {
 
     @Override
     public String toString() {
-        return "Banco{" + "nombre=" + nombre + ", direccion=" + direccion + '}';
+        return "Banco{" + "id=" + id + ", nombre=" + nombre + ", direccion=" + direccion + '}';
     }
-    
 }

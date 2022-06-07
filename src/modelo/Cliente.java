@@ -9,13 +9,13 @@ package modelo;
  * @author Gus-Gus
  */
 public class Cliente {
-    private int id;
+    private long id;
     private String nombre;
     private String apellido;
-    private long numCedula;
-    private long numCuenta;
+    private String numCedula;
+    private String numCuenta;
 
-    public Cliente(int id, String nombre, String apellido, long numCedula, long numCuenta) {
+    public Cliente(long id, String nombre, String apellido, String numCedula, String numCuenta) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -23,11 +23,11 @@ public class Cliente {
         this.numCuenta = numCuenta;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -47,19 +47,19 @@ public class Cliente {
         this.apellido = apellido;
     }
 
-    public long getNumCedula() {
+    public String getNumCedula() {
         return numCedula;
     }
 
-    public void setNumCedula(long numCedula) {
+    public void setNumCedula(String numCedula) {
         this.numCedula = numCedula;
     }
 
-    public long getNumCuenta() {
+    public String getNumCuenta() {
         return numCuenta;
     }
 
-    public void setNumCuenta(long numCuenta) {
+    public void setNumCuenta(String numCuenta) {
         this.numCuenta = numCuenta;
     }
 

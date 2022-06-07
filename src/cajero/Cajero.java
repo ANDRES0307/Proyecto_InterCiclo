@@ -4,6 +4,10 @@
  */
 package cajero;
 
+import java.util.Scanner;
+import vista.VistaBanco;
+import vista.VistaCliente;
+
 /**
  *
  * @author Gus-Gus
@@ -14,7 +18,23 @@ public class Cajero {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner teclado = new Scanner(System.in);
+        VistaBanco vistaBanco = new VistaBanco();
+        VistaCliente vistaCliente = new VistaCliente();
+        int opc = 0;
+        do {  
+            System.out.println("Generador de Turno");
+            System.out.println("1. Banco");
+            System.out.println("2. Cliente");
+            System.out.println("3. Cajero");
+            opc = teclado.nextInt();
+            switch(opc){
+                case 1: vistaBanco.menu(); break;
+                case 2: vistaCliente.menu(); break;
+            }
+            
+        } while (opc !=0);
+
     }
     
 }
