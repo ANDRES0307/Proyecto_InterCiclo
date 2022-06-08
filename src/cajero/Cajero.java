@@ -6,6 +6,7 @@ package cajero;
 
 import java.util.Scanner;
 import vista.VistaBanco;
+import vista.VistaCajero;
 import vista.VistaCliente;
 
 /**
@@ -21,6 +22,7 @@ public class Cajero {
         Scanner teclado = new Scanner(System.in);
         VistaBanco vistaBanco = new VistaBanco();
         VistaCliente vistaCliente = new VistaCliente();
+        VistaCajero vistaCajero = new VistaCajero();
         int opc = 0;
         do {  
             System.out.println("Generador de Turno");
@@ -31,6 +33,7 @@ public class Cajero {
             switch(opc){
                 case 1: vistaBanco.menu(); break;
                 case 2: vistaCliente.menu(); break;
+                case 3: vistaCajero.menu(); break;
             }
             
         } while (opc !=0);

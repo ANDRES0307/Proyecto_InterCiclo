@@ -21,7 +21,6 @@ public class ControladorCliente {
             return listaCliente.get(listaCliente.size() - 1).getId() + 1;
         }
         return 1;
-
     }
     
     public boolean crear(Cliente cliente){

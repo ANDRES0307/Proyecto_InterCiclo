@@ -4,7 +4,8 @@
  */
 package modelo;
 
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -13,36 +14,61 @@ import java.util.Date;
 public class Cajero {
     
     private long id;
-    private Banco banco;
+    private String nombre;
+    private int clientesAtendidos;
     private String turno;
-    private Date fecha;
+    private List<Cliente>listaClientes;
 
-    public Cajero(long id, Banco banco, String turno, Date fecha) {
+    public Cajero(long id, String nombre, int clientesAtendidos, String turno) {
         this.id = id;
-        this.banco = banco;
+        this.nombre = nombre;
+        this.clientesAtendidos = clientesAtendidos;
         this.turno = turno;
-        this.fecha = fecha;
+        this.listaClientes=new ArrayList<>();
+    }
+
+    public long getId() {
+        return id;
     }
 
     public void setId(long id) {
         this.id = id;
     }
 
-    public void setBanco(Banco banco) {
-        this.banco = banco;
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getTurno() {
+        return turno;
     }
 
     public void setTurno(String turno) {
         this.turno = turno;
     }
+    public int getClientesAtendidos() {
+        return clientesAtendidos;
+    }
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
+    public void setClientesAtendidos(int clientesAtendidos) {
+        this.clientesAtendidos = clientesAtendidos;
     }
 
     @Override
     public String toString() {
-        return "Cajero{" + "id=" + id + ", banco=" + banco + ", turno=" + turno + ", fecha=" + fecha + '}';
+        return "Cajero{" + "id=" + id + ", nombre=" + nombre + ", clientesAtendidos=" + clientesAtendidos + '}';
+    }
+
+    public List<Cliente> getListaClientes() {
+        return listaClientes;
+    }
+
+    public void setListaClientes(List<Cliente> listaClientes) {
+        this.listaClientes = listaClientes;
     }
     
 }
